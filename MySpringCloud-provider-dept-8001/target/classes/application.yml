@@ -19,6 +19,8 @@ mybatis:
 server:
   port: 8001              #微服务的端口
 security:
+#  sessions: always    #总是保持session状态，session状态不会变
+  sessions: stateless  #不保留用户的状态，每一次请求都是一个新的用户 ，
   basic:
     enabled: true       #启动springSecurity的安全配置， 默认为ture
   user:

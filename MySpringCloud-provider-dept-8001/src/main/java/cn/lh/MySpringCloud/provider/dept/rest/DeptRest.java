@@ -1,6 +1,7 @@
 package cn.lh.MySpringCloud.provider.dept.rest;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -33,5 +34,10 @@ public class DeptRest {
 	@PostMapping("/dept/add")
 	public Object add(@RequestBody Dept dept) {
 		return this.deptService.add(dept);
+	}
+	
+	@GetMapping("/dept/sessionid")
+	public Object sessionId(HttpServletRequest request) {
+		return request.getSession().getId();
 	}
 }
