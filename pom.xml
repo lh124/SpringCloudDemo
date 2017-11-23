@@ -27,6 +27,11 @@
 				<version>${MySpringCloud.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>cn.lh</groupId>
+				<artifactId>MySpringCloud-Security</artifactId>
+				<version>${MySpringCloud.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
 				<version>${spring-cloud-dependencies.version}</version>
