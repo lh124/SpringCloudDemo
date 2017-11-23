@@ -8,8 +8,8 @@
 		<artifactId>MySpringCloud</artifactId>
 		<version>0.0.1</version>
 	</parent>
-	<artifactId>MySpringCloud-provider-dept-8001</artifactId>
-	<name>MySpringCloud-provider-dept-8001</name>
+	<artifactId>MySpringCloud-consumer-resttemplate-80</artifactId>
+	<name>MySpringCloud-consumer-resttemplate-80</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -19,14 +19,9 @@
 			<groupId>cn.lh</groupId>
 			<artifactId>MySpringCloud-api</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>druid</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-		</dependency>
+		<!-- <dependency> <groupId>com.alibaba</groupId> <artifactId>druid</artifactId> 
+			</dependency> <dependency> <groupId>mysql</groupId> <artifactId>mysql-connector-java</artifactId> 
+			</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jetty</artifactId>
@@ -48,10 +43,8 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-				<groupId>org.mybatis.spring.boot</groupId>
-				<artifactId>mybatis-spring-boot-starter</artifactId>
-			</dependency>
+		<!-- <dependency> <groupId>org.mybatis.spring.boot</groupId> <artifactId>mybatis-spring-boot-starter</artifactId> 
+			</dependency> -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>

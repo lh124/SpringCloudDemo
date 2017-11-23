@@ -103,5 +103,6 @@
 	</build>
 	<modules>
 		<module>MySpringCloud-provider-dept-8001</module>
+		<module>MySpringCloud-consumer-resttemplate-80</module>
 	</modules>
 </project>
