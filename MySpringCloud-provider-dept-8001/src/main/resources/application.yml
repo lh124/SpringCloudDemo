@@ -18,3 +18,9 @@ mybatis:
   - classpath:mybatis/mapper/**/*.xml
 server:
   port: 8001              #微服务的端口
+security:
+  basic:
+    enabled: true       #启动springSecurity的安全配置， 默认为ture
+  user:
+    name: lh      #用户名
+    password: liaohuan  #密码
