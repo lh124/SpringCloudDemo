@@ -1,4 +1,4 @@
-package org.MySpringCloud.provider.dept;
+package cn.lh.MySpringCloud.provider.dept;
 
 /**
  * Hello world!
