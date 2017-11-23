@@ -3,6 +3,7 @@ package cn.lh.MySpringCloud.provider.dept.rest;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,8 @@ import cn.lh.MySpringCloud.api.vo.Dept;
 public class DeptRest {
 	@Resource
 	private IDeptService deptService;
+	@Resource
+	private DiscoveryClient client;
 //	访问地址http://dept-8001.com:8001/dept/list
 //	配置安全访问后的地址：http://dept-8001.com:8001/dept/list
 	@GetMapping("/dept/list")
@@ -39,5 +42,9 @@ public class DeptRest {
 	@GetMapping("/dept/sessionid")
 	public Object sessionId(HttpServletRequest request) {
 		return request.getSession().getId();
+	}
+	@GetMapping("/dept/discover")
+	public Object discover() {
+		return this.client;
 	}
 }

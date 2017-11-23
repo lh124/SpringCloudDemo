@@ -1,4 +1,6 @@
 spring:
+  application:
+   name: myspringcloud-provider-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource    # 配置当前要使用的数据源的操作类型
     driver-class-name: org.gjt.mm.mysql.Driver      # 配置MySQL的驱动程序类
@@ -18,6 +20,20 @@ mybatis:
   - classpath:mybatis/mapper/**/*.xml
 server:
   port: 8001              #微服务的端口
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-7001.com:7001/eureka   # 定义你服务的注册路径
+  instance:
+    instance-id: dept-8001.com
+    prefer-ip-address: true   # 底部显示IP地址
+      
+info:
+  app.name: lh-springcloud-dept
+  company.name: www.github.lh124
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
 #security:
 #  sessions: always    #总是保持session状态，session状态不会变
 #  sessions: stateless  #不保留用户的状态，每一次请求都是一个新的用户 ，

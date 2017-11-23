@@ -104,11 +104,22 @@
 					<encode>${project.build.sourceEncoding}</encode>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<delimiters>
+						<delimiter>$</delimiter>
+					</delimiters>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 	<modules>
 		<module>MySpringCloud-provider-dept-8001</module>
 		<module>MySpringCloud-consumer-resttemplate-80</module>
     <module>MySpringCloud-Security</module>
-  </modules>
+    <module>MySpringCloud-Eureka-7001</module>
+	</modules>
 </project>
