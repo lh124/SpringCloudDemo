@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>cn.lh</groupId>
@@ -11,8 +14,12 @@
 	<url>http://maven.apache.org</url>
 	<properties>
 		<MySpringCloud.version>0.0.1</MySpringCloud.version>
-		<spring-boot-dependencies.version>1.5.8.RELEASE</spring-boot-dependencies.version>
-		<spring-cloud-dependencies.version>Dalston.SR4</spring-cloud-dependencies.version>
+		
+<spring-boot-dependencies.version>1.5.8.RELEASE</spring-boot-dependencies.version
+>
+		
+<spring-cloud-dependencies.version>Dalston.SR4</spring-cloud-dependencies.version
+>
 		<jdk.version>1.8</jdk.version>
 		<druid.version>1.1.0</druid.version>
 		<junit.version>4.12</junit.version>
@@ -100,7 +107,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>${jdk.version}</source><!-- 源代码使用的开发版本 -->
-					<target>${jdk.version}</target><!-- 需要生成的目标class文件的编译版本 -->
+					<target>${jdk.version}</target><!-- 
+需要生成的目标class文件的编译版本 -->
 					<encode>${project.build.sourceEncoding}</encode>
 				</configuration>
 			</plugin>
@@ -118,8 +126,15 @@
 	</build>
 	<modules>
 		<module>MySpringCloud-provider-dept-8001</module>
+		<module>MySpringCloud-provider-dept-8002</module>
+		<module>MySpringCloud-provider-dept-8003</module>
 		<module>MySpringCloud-consumer-resttemplate-80</module>
     <module>MySpringCloud-Security</module>
     <module>MySpringCloud-Eureka-7001</module>
+	 <module>MySpringCloud-Eureka-7002</module>
+	  <module>MySpringCloud-Eureka-7003</module>
+	<module>MySpringCloud-consumer-ribbon</module>
+	<module>MySpringCloud-Eureka-service</module>
+	
 	</modules>
 </project>

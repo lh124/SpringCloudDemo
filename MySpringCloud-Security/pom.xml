@@ -8,9 +8,7 @@
 		<artifactId>MySpringCloud</artifactId>
 		<version>0.0.1</version>
 	</parent>
-	<groupId>cn.lh</groupId>
 	<artifactId>MySpringCloud-Security</artifactId>
-	<version>0.0.1</version>
 	<name>MySpringCloud-Security</name>
 	<url>http://maven.apache.org</url>
 	<properties>

@@ -1,0 +1,65 @@
+spring:
+  profiles:
+    active:
+    - product-7001
+
+---
+spring:
+  profiles: product-7001
+server:
+  port: 7001      # Eureka服务端口
+security:
+  basic:
+    enabled: true
+  user:
+    name: edmin
+    password: hello
+eureka: 
+  client:
+    service-url:
+      defaultZone: http://edmin:hello@eureka-7002.com:7002/eureka,http://edmin:hello@eureka-7003.com:7003/eureka   # 定义你服务的注册路径
+    register-with-eureka: false     # 当前的服务不注册到eureka之中
+    fetch-registry: false           # 该服务不通过eureka抓取任何注册信息
+  instance: 
+    hostname: eureka-7001.com
+
+---
+spring:
+  profiles: product-7002
+server:
+  port: 7002      # Eureka服务端口
+security:
+  basic:
+    enabled: true
+  user:
+    name: edmin
+    password: hello
+eureka: 
+  client:
+    service-url:
+      defaultZone: http://edmin:hello@eureka-7001.com:7001/eureka,http://edmin:hello@eureka-7003.com:7003/eureka
+    register-with-eureka: false     # 当前的服务不注册到eureka之中
+    fetch-registry: false           # 该服务不通过eureka抓取任何注册信息
+  instance: 
+    hostname: eureka-7002.com
+    
+---
+spring:
+  profiles: product-7003
+server:
+  port: 7003      # Eureka服务端口
+security:
+  basic:
+    enabled: true
+  user:
+    name: edmin
+    password: hello
+eureka: 
+  client:
+    service-url:
+      defaultZone: http://edmin:hello@eureka-7001.com:7001/eureka,http://edmin:hello@eureka-7002.com:7002/eureka
+    register-with-eureka: false     # 当前的服务不注册到eureka之中
+    fetch-registry: false           # 该服务不通过eureka抓取任何注册信息
+  instance: 
+    hostname: eureka-7003.com
+    

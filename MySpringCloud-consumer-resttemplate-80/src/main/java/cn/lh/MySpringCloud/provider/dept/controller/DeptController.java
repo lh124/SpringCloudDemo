@@ -16,9 +16,9 @@ import cn.lh.MySpringCloud.api.vo.Dept;
 
 @RestController
 public class DeptController {
-	private static final String DEPT_ADD_URL="http://dept-8001.com:8001/dept/add";
-	private static final String DEPT_LIST_URL="http://dept-8001.com:8001/dept/list";
-	private static final String DEPT_GET_URL="http://dept-8001.com:8001/dept/get";
+	private static final String DEPT_ADD_URL="http://MYSPRINGCLOUD-PROVIDER-DEPT/dept/add";
+	private static final String DEPT_LIST_URL="http://MYSPRINGCLOUD-PROVIDER-DEPT/dept/list";
+	private static final String DEPT_GET_URL="http://MYSPRINGCLOUD-PROVIDER-DEPT/dept/get";
 	@Resource
 	private RestTemplate restTemplate;
 	@Resource

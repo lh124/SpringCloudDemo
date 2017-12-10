@@ -24,7 +24,7 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-7001.com:7001/eureka   # 定义你服务的注册路径
+      defaultZone: http://edmin:hello@eureka-7001.com:7001/eureka,http://edmin:hello@eureka-7002.com:7002/eureka,http://edmin:hello@eureka-7003.com:7003/eureka   # 定义你服务的注册路径
   instance:
     instance-id: dept-8001.com
     prefer-ip-address: true   # 底部显示IP地址
